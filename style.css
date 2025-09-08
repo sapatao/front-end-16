@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1c65d3;
+  font-family: Arial, sans-serif;
+}
+
+/* Caixa do formulário */
+.form-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form em coluna */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Inputs */
+input[type="text"], input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Animação de foco nos inputs */
+input[type="text"]:focus, input[type="password"]:focus {
+  transform: scale(1.05);
+  border-color: #6C63FF;
+  outline: none;
+}
+
+/* Botão */
+button {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6C63FF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botão em estado de carregamento */
+button.loading {
+  animation: spin 0.7s linear infinite;
+}
+
+/* Keyframes do giro */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Estado inicial para GSAP */
+form input, #entrar {
+  opacity: 0;
+  transform: translateY(50px);
+}
